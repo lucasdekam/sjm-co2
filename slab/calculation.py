@@ -40,7 +40,7 @@ calc = SJM(
 )
 atoms.calc = calc
 
-potential_range = np.linspace(3, 5, 10)
+potential_range = np.linspace(3, 5, 5)
 energies = np.zeros(potential_range.shape)
 
 for i, pot in enumerate(potential_range):
