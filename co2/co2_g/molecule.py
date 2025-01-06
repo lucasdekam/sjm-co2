@@ -1,8 +1,8 @@
-from ase.build import molecule
+from ase.io import read
 
 from gpaw import GPAW
 
-atoms = molecule("CO", vacuum=10)
+atoms = read("CO2_g.traj")
 atoms.pbc = (True, True, False)
 calc = GPAW(mode="fd", xc="RPBE", txt="molecule.txt")
 atoms.calc = calc
